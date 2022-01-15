@@ -200,7 +200,7 @@ int Log_initialize(Log_nameValue* info)
 			info++;
 		}
 	}
-#if !defined(_WIN32) && !defined(_WIN64)
+#if !defined(_WIN32) && !defined(_WIN64) && !defined(ANDROID)
 	if (stat("/proc/version", &buf) != -1)
 	{
 		FILE* vfile;
